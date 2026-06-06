@@ -1,0 +1,29 @@
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.DS_Store
+
+# Build artifacts
+*.kzb
+*.kzb~
+*.dll
+*.lib
+*.so
+*.dylib
+*.pdb
+*.obj
+*.o
+
+# OS
+Thumbs.db
+
+# Temp
+*.tmp
+*.bak
+
+# Kanzi Studio temp
+*.tmpkzb
+*.kzb.bak
