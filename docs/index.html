@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanzi Studio 实战工具箱</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text2: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #1f6feb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+  header {
+    background: linear-gradient(135deg, #1f6feb 0%, #58a6ff 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  h1 { margin: 0 0 0.5rem; font-size: 2.2rem; }
+  .tagline { color: rgba(255,255,255,0.85); font-size: 1.1rem; }
+  h2 {
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+  }
+  h3 { color: var(--text); margin-top: 1.5rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+  .topic {
+    background: rgba(88, 166, 255, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    border-radius: 12px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-size: 0.92rem;
+  }
+  th { background: var(--bg2); color: var(--accent); }
+  tr:hover td { background: rgba(88, 166, 255, 0.05); }
+  .badge {
+    display: inline-block;
+    background: #f85149;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 8px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  pre {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.8rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  code {
+    background: var(--bg2);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  pre code { background: none; padding: 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  .card h3 { margin: 0 0 0.5rem; color: var(--accent); }
+  .card .num { font-size: 1.8rem; color: var(--text); font-weight: bold; }
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    color: var(--text2);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>🎨 Kanzi Studio 实战工具箱</h1>
+    <p class="tagline">40 篇 CSDN 专栏文章系统整理 · 7 大主题 · C++/C#/OpenGL/MCP 全栈</p>
+    <div class="topics">
+      <span class="topic">kanzi</span>
+      <span class="topic">hmi</span>
+      <span class="topic">automotive</span>
+      <span class="topic">cockpit</span>
+      <span class="topic">cpp</span>
+      <span class="topic">csharp</span>
+      <span class="topic">opengl</span>
+      <span class="topic">mcp</span>
+      <span class="topic">qt</span>
+      <span class="topic">rightware</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="meta">
+    <strong>📚 源</strong>：<a href="https://blog.csdn.net/chen_227/category_11957782.html">CSDN 专栏 - chen_227</a> （2022-11 → 2026-05）<br>
+    <strong>🔗 仓库</strong>：<a href="https://github.com/pixelpiloter/kanzi-toolbox">github.com/pixelpiloter/kanzi-toolbox</a><br>
+    <strong>📄 协议</strong>：<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>（与原作者一致）<br>
+    <strong>⭐ 首发</strong>：全球首个公开发布的 Kanzi Studio MCP Server 方案
+  </div>
+
+  <h2>📊 内容总览</h2>
+  <div class="grid">
+    <div class="card"><div class="num">40</div>篇精选文章</div>
+    <div class="card"><div class="num">7</div>大主题分类</div>
+    <div class="card"><div class="num">3.5</div>年内容沉淀</div>
+    <div class="card"><div class="num">10+</div>技术栈覆盖</div>
+  </div>
+
+  <h2>📑 7 大主题分类</h2>
+
+  <h3>1. 插件与扩展开发 <span class="badge">16 篇</span></h3>
+  <p>核心方向：插件工程结构、节点、离屏渲染、视频、粒子</p>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2026-05-12</td><td><a href="../articles/161015875.html">kanzi 场景树预览</a></td><td>ImGui 场景树 + 离屏纹理</td></tr>
+    <tr><td>2026-04-28</td><td><a href="../articles/160585773.html">kanzi 插件之节点树可视化</a></td><td>Prefab 递归展开 + 卡片视图</td></tr>
+    <tr><td>2026-01-26</td><td><a href="../articles/157393281.html">kanzi 节点转换插件</a></td><td>C# PluginCommand 一键换类型</td></tr>
+    <tr><td>2025-12-25</td><td><a href="../articles/156260166.html">kanzi 实现第一人称视角移动</a></td><td>玩家胶囊 + camera 挂载</td></tr>
+    <tr><td>2025-12-22</td><td><a href="../articles/156143820.html">kanzi 多语言优化</a></td><td>字体裁剪 + 切换无卡顿</td></tr>
+    <tr><td>2025-06-26</td><td><a href="../articles/148920093.html">kanzi 视频插件</a></td><td>ffmpeg 集成（Windows/QNX/Linux）</td></tr>
+    <tr><td>2025-01-07</td><td><a href="../articles/144983959.html">kanzi 将画面保存成本地图片</a></td><td>FBO 离屏渲染 + glReadPixels</td></tr>
+    <tr><td>2024-06-05</td><td><a href="../articles/139473541.html">kanzi 插值属性动画打断机制</a></td><td>PropertyTargetInterpolator Acceleration</td></tr>
+    <tr><td>2024-04-29</td><td><a href="../articles/138304569.html">kanzi Prefab View2D 异步加载入场动画</a></td><td>异步线程 + 加载完成回调</td></tr>
+    <tr><td>2024-04-26</td><td><a href="../articles/138281054.html">kanzi 多工程属性绑定问题</a></td><td>PluginDataSourceGlobal 全局变量</td></tr>
+    <tr><td>2024-04-15</td><td><a href="../articles/137787734.html">kanzi 3.9.8 DataSource 动态预览</a></td><td>XML 变化实时刷新，免 Restart</td></tr>
+    <tr><td>2024-04-11</td><td><a href="../articles/137636738.html">kanzi 2D 节点绘制到 3D 模型上</a></td><td>反向 render pass 渲染</td></tr>
+    <tr><td>2024-03-25</td><td><a href="../articles/137006368.html">kanzi 状态机插件</a></td><td>拓展原生状态机，3 状态规则引擎</td></tr>
+    <tr><td>2024-03-21</td><td><a href="../articles/137334388.html">kanzi 运行时节点状态展示</a></td><td>ImGui 子窗口 + 离屏渲染</td></tr>
+    <tr><td>2023-09-25</td><td><a href="../articles/133266560.html">kanzi 动态替换图片不增加内存方案</a></td><td>BitmapImage 复用 + ResizeFilter</td></tr>
+    <tr><td>2023-07-22</td><td><a href="../articles/131868251.html">kanzi 状态机动画打断实现方案</a></td><td>上一动画立即完成 → 播放下一个</td></tr>
+    <tr><td>2023-02-07</td><td><a href="../articles/128912484.html">使用 kanzi 开发仪表 HMI 插件</a></td><td>插件工程模板（所有插件文章基础）</td></tr>
+    <tr><td>2023-01-09</td><td><a href="../articles/128615163.html">kanzi 粒子插件</a></td><td>KanziPluginParticle + Emitter 系统</td></tr>
+  </table>
+
+  <h3>2. Studio 窗口插件（编辑器增强）<span class="badge">3 篇</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2025-07-23</td><td><a href="../articles/149568661.html">kanzi3.6.10 窗口插件-网页生成界面</a></td><td>Sketch/HTML → Kanzi 自动转换</td></tr>
+    <tr><td>2024-12-25</td><td><a href="../articles/144720596.html">kanzi3.6.10 窗口插件-查找绑定信息</a></td><td>Ctrl+F 增强，跨工程查询</td></tr>
+    <tr><td>2024-12-05</td><td><a href="../articles/144272032.html">kanzi3.6.10 窗口插件-美化绑定内容</a></td><td>绑定代码高亮（解决黑色难读）</td></tr>
+  </table>
+
+  <h3>3. 绑定 Binding <span class="badge">3 篇</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2026-04-17</td><td><a href="../articles/160254798.html">kanzi 绑定之 AI 解读</a></td><td>Claude 解读复杂绑定 + 检查错误</td></tr>
+    <tr><td>2024-03-19</td><td><a href="../articles/136833019.html">kanzi 快速调试绑定</a></td><td>InputBindText 解析 + 重新生成绑定</td></tr>
+    <tr><td>2024-03-15</td><td><a href="../articles/136738815.html">Kanzi 绑定之绑定模式与区别</a></td><td>One-way / Two-way / 表达式 三种模式</td></tr>
+  </table>
+
+  <h3>4. 3D / 渲染 / Shader <span class="badge">7 篇</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2025-06-26</td><td><a href="../articles/148926776.html">kanzi 动态加载模型</a></td><td>多模型合并 mesh，batch count 不增</td></tr>
+    <tr><td>2024-12-30</td><td><a href="../articles/144817439.html">kanzi 做 3d 时钟屏保</a></td><td>blender 建模 + kanzi 渲染</td></tr>
+    <tr><td>2024-10-31</td><td><a href="../articles/143404863.html">在 kanzi 3.9.8 里使用 API 创建自定义材质</a></td><td>Render Target Texture + Image</td></tr>
+    <tr><td>2024-03-29</td><td><a href="../articles/137143194.html">kanzi 3d 知识点</a></td><td>资料汇总（视频/文档/案例）</td></tr>
+    <tr><td>2023-02-20</td><td><a href="../articles/129118208.html">kanzi 中使用 opengl 描绘三角形</a></td><td>3D 插件 + RenderPassProperty</td></tr>
+    <tr><td>2022-11-25</td><td><a href="../articles/128031507.html">Kanzi Shader 入门</a></td><td>OpenGL ES 2.0/3.0 + 顶点/片段着色器</td></tr>
+  </table>
+
+  <h3>5. 多语言 / 性能优化 <span class="badge">3 篇</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2025-07-04</td><td><a href="../articles/149113101.html">kanzi 切换多语言卡顿优化方案</a></td><td>ttf 字体裁剪（30k → 几百字）</td></tr>
+    <tr><td>2024-07-02</td><td><a href="../articles/140121449.html">kanzi3.6.10 动态加载和替换多语言方案</a></td><td>单独 kzb 导出 + Localization Table</td></tr>
+    <tr><td>2024-03-30</td><td><a href="../articles/137172137.html">kanzi 3.9.8 多国语实现</a></td><td>绑定快速实现动态数字翻译</td></tr>
+  </table>
+
+  <h3>6. MCP / AI 集成 <span class="badge">2 篇 · 全球首发</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2026-04-22</td><td><a href="../articles/160398199.html">Kanzi Studio MCP Server 方案</a></td><td>C# MCP Server + Named Pipe + 3 个工具</td></tr>
+  </table>
+
+  <h3>7. 工程工具与脚本 <span class="badge">6 篇</span></h3>
+  <table>
+    <tr><th>日期</th><th>标题</th><th>核心点</th></tr>
+    <tr><td>2024-04-26</td><td><a href="../articles/138219576.html">kanzi 工程间拷贝节点思路</a></td><td>自定义命令复制 + 粘贴节点数据</td></tr>
+    <tr><td>2024-04-24</td><td><a href="../articles/138164162.html">kanzi 节点裁切</a></td><td>Clip Children 关闭方法</td></tr>
+    <tr><td>2024-04-22</td><td><a href="../articles/138076801.html">kanzi 工程辅助解析</a></td><td>Python 解析 .kzproj 快速上手</td></tr>
+    <tr><td>2024-04-13</td><td><a href="../articles/137707478.html">kanzi API 案例</a></td><td>按钮事件 / 节点查找 / property 设置</td></tr>
+    <tr><td>2024-03-19</td><td><a href="../articles/136847194.html">kanzi 颜色工作流程</a></td><td>sRGB / 线性伽玛色彩空间</td></tr>
+    <tr><td>2023-07-06</td><td><a href="../articles/131572237.html">kanzi 中 DataSource 不好用的解决方案</a></td><td>递归查找 Data Context 绑定</td></tr>
+  </table>
+
+  <h2>🚀 学习路径</h2>
+
+  <h3>🟢 新手（1-2 周）</h3>
+  <ol>
+    <li><a href="../articles/128912484.html">使用 kanzi 开发仪表 HMI 插件</a>（基础模板）</li>
+    <li><a href="../articles/137707478.html">kanzi API 案例</a>（API 用法速查）</li>
+    <li><a href="../articles/137143194.html">kanzi 3d 知识点</a>（资源汇总）</li>
+  </ol>
+
+  <h3>🟡 进阶（2-4 周）</h3>
+  <ol start="4">
+    <li><a href="../articles/128031507.html">Kanzi Shader 入门</a>（渲染基础）</li>
+    <li><a href="../articles/136738815.html">Kanzi 绑定之绑定模式与区别</a>（核心概念）</li>
+    <li><a href="../articles/137006368.html">kanzi 状态机插件</a>（状态机扩展）</li>
+  </ol>
+
+  <h3>🔴 高阶（4 周+）</h3>
+  <ol start="7">
+    <li><a href="../articles/160398199.html">Kanzi Studio MCP Server 方案</a>（AI 集成）</li>
+    <li><a href="../articles/160254798.html">kanzi 绑定之 AI 解读</a>（AI 增强调试）</li>
+    <li><a href="../articles/137334388.html">运行时节点状态 / 场景树预览</a>（调试工具链）</li>
+  </ol>
+
+  <h2>🔧 关键 API 速查</h2>
+
+  <h3>节点</h3>
+  <pre><code>// 节点查找
+NodeSharedPtr node = getScreen()-&gt;lookupNode&lt;Node2D&gt;("/Root/Path/To/Node");
+
+// 离屏渲染（FBO）
+kr-&gt;bindFramebuffer(m_fbo);
+kr-&gt;setDefaultFramebuffer(m_fbo);
+kr-&gt;clear();
+node2d-&gt;render(renderer, compositionStack, baseTransform);
+glReadPixels(0, 0, w, h, GL_RGBA, GL_UNSIGNED_BYTE, data);</code></pre>
+
+  <h3>状态机</h3>
+  <pre><code>// 切换状态
+stateManagerPtr-&gt;goToState((Node*)(this), "StateGroup", "StateName", true);
+
+// 插值打断
+PropertyTargetInterpolator* pti = ...;
+pti-&gt;setAcceleration(1000);
+node-&gt;removeNodeComponent(pti);
+node-&gt;addNodeComponent(pti);</code></pre>
+
+  <h2>💬 常见问题 FAQ</h2>
+  <table>
+    <tr><th>问题</th><th>解决方案</th><th>参考</th></tr>
+    <tr><td>切换多语言卡顿</td><td>ttf 字体裁剪，剔除未用字符</td><td><a href="../articles/149113101.html">149113101</a></td></tr>
+    <tr><td>DataSource preview 需手动 Restart</td><td>自制 PluginDynamicDataSource</td><td><a href="../articles/137787734.html">137787734</a></td></tr>
+    <tr><td>状态机无法实现"0→1 和 1→0 双向动画"</td><td>拓展为 3 状态插件</td><td><a href="../articles/137006368.html">137006368</a></td></tr>
+    <tr><td>跨工程属性绑定爆红</td><td>PluginDataSourceGlobal 走 datasource</td><td><a href="../articles/138281054.html">138281054</a></td></tr>
+    <tr><td>动画无法打断</td><td>改 PropertyTargetInterpolator Acceleration</td><td><a href="../articles/139473541.html">139473541</a></td></tr>
+    <tr><td>动态加载图片内存增长</td><td>BitmapImage 替换内容（不重建 Texture）</td><td><a href="../articles/133266560.html">133266560</a></td></tr>
+    <tr><td>离屏截图无法获取纹理</td><td>自定义 FBO + glReadPixels</td><td><a href="../articles/144983959.html">144983959</a></td></tr>
+    <tr><td>动态生成模型 batch count 暴涨</td><td>多模型合并到一个 mesh</td><td><a href="../articles/148926776.html">148926776</a></td></tr>
+    <tr><td>工程间无法复制节点</td><td>C# 自定义命令 + 剪贴板数据</td><td><a href="../articles/138219576.html">138219576</a></td></tr>
+    <tr><td>绑定复杂看不懂</td><td>Claude AI 解读</td><td><a href="../articles/160254798.html">160254798</a></td></tr>
+  </table>
+
+</div>
+
+<footer>
+  <p>本仓库由 AI 助手从 CSDN 专栏抓取整理，原文一切权益归原作者 <strong>chen_227</strong> 所有 · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="https://github.com/pixelpiloter/kanzi-toolbox">⭐ Star on GitHub</a> · <a href="../README.md">查看 README</a> · <a href="../SUMMARY.md">查看 SUMMARY</a></p>
+</footer>
+
+</body>
+</html>
